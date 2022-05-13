@@ -50,14 +50,14 @@ const Navbar = () => {
         <div className="navbar">
             <div className="logo-container">
                 <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /></button>
-                <Link to='/'><img src={Logo} alt="" className='logo' /></Link>
+                <Link to='/sneakers/'><img src={Logo} alt="" className='logo' /></Link>
             </div>
             <div className='others'>
-                <Link to='/' className='others-list'>Collections</Link>
-                <Link to='/' className='others-list'>Men</Link>
-                <Link to='/' className='others-list'>Women</Link>
-                <Link to='/' className='others-list'>About</Link>
-                <Link to='/' className='others-list'>Contact</Link>
+                <Link to='/sneakers/' className='others-list'>Collections</Link>
+                <Link to='/sneakers/' className='others-list'>Men</Link>
+                <Link to='/sneakers/' className='others-list'>Women</Link>
+                <Link to='/sneakers/' className='others-list'>About</Link>
+                <Link to='/sneakers/' className='others-list'>Contact</Link>
             </div>
             {menu ? (
                 <div className='other-set'>
@@ -65,11 +65,11 @@ const Navbar = () => {
                         <div className='small-other-cont'>
                             <button className="cust-close" onClick={() => setMenu(false)}><CustomClose  fill={'grey'} /></button>
                             <div className="other-items">
-                                <Link to='/' className='other-item'>Collections</Link>
-                                <Link to='/' className='other-item'>Men</Link>
-                                <Link to='/' className='other-item'>Women</Link>
-                                <Link to='/' className='other-item'>About</Link>
-                                <Link to='/' className='other-item'>Contact</Link>
+                                <Link to='/sneakers/' className='other-item'>Collections</Link>
+                                <Link to='/sneakers/' className='other-item'>Men</Link>
+                                <Link to='/sneakers/' className='other-item'>Women</Link>
+                                <Link to='/sneakers/' className='other-item'>About</Link>
+                                <Link to='/sneakers/' className='other-item'>Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
                 { cart ? (
                     <div>{content}</div>
                 ) : (null)}
-                <Link to='/' className="profile-img"><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
+                <Link to='/sneakers/' className="profile-img"><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
             </div>
         </div>
      );
