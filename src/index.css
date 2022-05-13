@@ -71,7 +71,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   text-decoration: none;
-  color: black;
+  color: rgb(110, 110, 110);
 }
 
 .navbar .others .others-list:hover {
@@ -288,6 +288,8 @@ body {
   border-radius: 13px;
   background-color: white;
   padding: 0px;
+  width: 90px;
+  height: 90px;
 }
 
 .body .current-img img {
@@ -299,6 +301,8 @@ body {
   border-radius: 10px;
   border: none;
   padding: 0px;
+  width: 90px;
+  height: 90px;
 }
 
 .body .small-img img {
