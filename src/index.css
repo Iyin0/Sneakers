@@ -220,7 +220,7 @@ body {
   cursor: pointer;
 }
 
-.cart-container button:hover {
+.cart-container .checkout:hover {
   background-color: hsl(26, 98%, 49%);
   transition: 0.3s ease;
 }
