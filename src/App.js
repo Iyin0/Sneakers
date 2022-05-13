@@ -1,11 +1,17 @@
 import Body from "./Body";
 import Navbar from "./Navbar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Body/>
+      
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Body/>} />
+        </Routes>
+      </BrowserRouter> 
     </div>
   );
 }

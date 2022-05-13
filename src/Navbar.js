@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { remove_cart } from './reducers/cartSlice';
 import CustomClose from './CustomClose';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -39,54 +40,53 @@ const Navbar = () => {
                                     <div>${(price * quantity).toFixed(2)}</div>
                                 </div>
                             </div>
-                            <div className="delete" onClick={() => remove_Cart(remove_cart())}><img src={Del} alt=""/></div>
+                            <button className="delete" onClick={() => remove_Cart(remove_cart())}><img src={Del} alt=""/></button>
                         </div>
-                        <button onClick={() => console.log(all)}>Checkout</button>
+                        <button className='checkout' onClick={() => console.log(all)}>Checkout</button>
                     </div>
     }
 
     return ( 
         <div className="navbar">
             <div className="logo-container">
-                <img src={Menu} alt="" className='menu' onClick={() => setMenu(true)}/>
-                <img src={Logo} alt="" className='logo' />
+                <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /></button>
+                <Link to='/'><img src={Logo} alt="" className='logo' /></Link>
+            </div>
+            <div className='others'>
+                <Link to='/' className='others-list'>Collections</Link>
+                <Link to='/' className='others-list'>Men</Link>
+                <Link to='/' className='others-list'>Women</Link>
+                <Link to='/' className='others-list'>About</Link>
+                <Link to='/' className='others-list'>Contact</Link>
             </div>
             {menu ? (
                 <div className='other-set'>
                     <div className="small-other">
                         <div className='small-other-cont'>
-                            <div className="cust-close" onClick={() => setMenu(false)}><CustomClose  fill={'grey'} /></div>
+                            <button className="cust-close" onClick={() => setMenu(false)}><CustomClose  fill={'grey'} /></button>
                             <div className="other-items">
-                                <div>Collections</div>
-                                <div>Men</div>
-                                <div>Women</div>
-                                <div>About</div>
-                                <div>Contact</div>
+                                <Link to='/' className='other-item'>Collections</Link>
+                                <Link to='/' className='other-item'>Men</Link>
+                                <Link to='/' className='other-item'>Women</Link>
+                                <Link to='/' className='other-item'>About</Link>
+                                <Link to='/' className='other-item'>Contact</Link>
                             </div>
                         </div>
                     </div>
-                    <div className="others-list"></div>
+                    <div className="empty-side"></div>
                 </div>
-            ) : (
-                <div className='others'>
-                    <div>Collections</div>
-                    <div>Men</div>
-                    <div>Women</div>
-                    <div>About</div>
-                    <div>Contact</div>
-                </div>
-            )}
+            ) : (null)}
             <div className="right-nav">
-                <div className='cart' onClick={() => setCart((prev) => !prev)}>
+                <button className='cart' onClick={() => setCart((prev) => !prev)}>
                     <CustomCart/>
                     {quantity ? (
                         <div className="quantity">{quantity}</div>
                     ): (<div className="quantity-emp"></div>)}
-                </div>
+                </button>
                 { cart ? (
                     <div>{content}</div>
                 ) : (null)}
-                <div className="profile-img"><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></div>
+                <Link to='/' className="profile-img"><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
             </div>
         </div>
      );

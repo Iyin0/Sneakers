@@ -68,15 +68,15 @@ const Body = () => {
                         </div>
                     ))}
                     <div className="change-img">
-                        <div className="previous" onClick={() => prevSlide()}><CustomPrevious/></div>
-                        <div className="next" onClick={() => nextSlide()}><CustomNext/></div>
+                        <button className="previous" onClick={() => prevSlide()}><CustomPrevious/></button>
+                        <button className="next" onClick={() => nextSlide()}><CustomNext/></button>
                     </div>
                 </div>
-                <div className="small-img" onClick={() => {setState(true); setClose("hsl(0, 0%, 100%)")}}>
+                <div className="small-img">
                     {merch[0].merch_thumbnail.map((img, index) => (
-                        <div className={index === current ? 'current-img' : 'just-img'} key={index}>
+                        <button className={index === current ? 'current-img' : 'just-img'} key={index} onClick={() => {setState(true); setClose("hsl(0, 0%, 100%)"); setCurrent(index)}}>
                             <img src={img} alt=""/>
-                        </div>
+                        </button>
                     ))}
                 </div>
             </div>
@@ -98,11 +98,11 @@ const Body = () => {
                 </div>
                 <div className="counter">
                     <div className="counter-cont">
-                        <div className="minus" onClick={() => decreaseItem()}><img src={Minus} alt=""/></div>
+                        <button className="minus" onClick={() => decreaseItem()}><img src={Minus} alt=""/></button>
                         <div className="amount">{count}</div>
-                        <div className="plus" onClick={() => increaseItem()}><img src={Plus} alt=""/></div>
+                        <button className="plus" onClick={() => increaseItem()}><img src={Plus} alt=""/></button>
                     </div>
-                    <button onClick={() => {update_Cart(add_cart(count)); 
+                    <button className='add-to-cart' onClick={() => {update_Cart(add_cart(count)); 
                                            update_Cart(add_pic(merch[0].merch_thumbnail[0])); 
                                            update_Cart(add_title(merch[0].store_merch)); 
                                            update_Cart(add_price(merch[0].merch_price))
@@ -114,9 +114,9 @@ const Body = () => {
             </div>
             {state ? (
                 <div className="over-body">
-                    <div className="close-body" onClick={() => {setState(false); setCurrent(0)}} onMouseEnter={() => setClose("hsl(26, 100%, 55%)")} onMouseLeave={() => setClose("hsl(0, 0%, 100%)")}>
+                    <button className="close-body" onClick={() => {setState(false); setCurrent(0)}} onMouseEnter={() => setClose("hsl(26, 100%, 55%)")} onMouseLeave={() => setClose("hsl(0, 0%, 100%)")}>
                         <CustomClose  fill={close} />
-                    </div>
+                    </button>
                     <div className="img-container">
                         <div className="img-slider">
                             {merch[0].merch_img.map((image, index) => (
@@ -127,15 +127,15 @@ const Body = () => {
                                 </div>
                             ))}
                             <div className="change-img-over">
-                                <div className="previous" onClick={() => prevSlide()}><CustomPrevious/></div>
-                                <div className="next" onClick={() => nextSlide()}><CustomNext/></div>
+                                <button className="previous" onClick={() => prevSlide()}><CustomPrevious/></button>
+                                <button className="next" onClick={() => nextSlide()}><CustomNext/></button>
                             </div>
                         </div>
                         <div className="small-img-over">
                             {merch[0].merch_thumbnail.map((img, index) => (
-                                <div className={index === current ? 'current-img' : 'just-img'} key={index}>
+                                <button className={index === current ? 'current-img' : 'just-img'} key={index} onClick={() => setCurrent(index)}>
                                     <img src={img} alt=""/>
-                                </div>
+                                </button>
                             ))}
                         </div>
                     </div>
