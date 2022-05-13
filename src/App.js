@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path="/sneakers/" element={<Body/>} />
+          <Route path="/" element={<Body/>} />
         </Routes>
       </BrowserRouter> 
     </div>
