@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sneakers/static/css/main.d9001a3d.css",
+    "main.js": "/sneakers/static/js/main.978b4e2c.js",
+    "static/media/image-product-2.jpg": "/sneakers/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
+    "static/media/image-product-1.jpg": "/sneakers/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/image-product-3.jpg": "/sneakers/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
+    "static/media/image-product-4.jpg": "/sneakers/static/media/image-product-4.9962862ef3eff6d65e5b.jpg",
+    "static/media/KumbhSans-ExtraBold.ttf": "/sneakers/static/media/KumbhSans-ExtraBold.93df02819fcd388c9aee.ttf",
+    "static/media/KumbhSans-Bold.ttf": "/sneakers/static/media/KumbhSans-Bold.4026f7b98708245e3b30.ttf",
+    "static/media/KumbhSans-Regular.ttf": "/sneakers/static/media/KumbhSans-Regular.f0b817a565ee7c8fbadb.ttf",
+    "static/media/logo.svg": "/sneakers/static/media/logo.4fe9c1e86cf9bf600f0c239f6a6e5317.svg",
+    "index.html": "/sneakers/index.html",
+    "static/media/icon-delete.svg": "/sneakers/static/media/icon-delete.1fd1f1f7d9f8ce5557b44ca3470a18b8.svg",
+    "static/media/icon-plus.svg": "/sneakers/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
+    "static/media/icon-minus.svg": "/sneakers/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
+    "static/media/icon-menu.svg": "/sneakers/static/media/icon-menu.c6107d03f1edcf73523ebd8cbc50a443.svg",
+    "main.d9001a3d.css.map": "/sneakers/static/css/main.d9001a3d.css.map",
+    "main.978b4e2c.js.map": "/sneakers/static/js/main.978b4e2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9001a3d.css",
+    "static/js/main.978b4e2c.js"
+  ]
+}
