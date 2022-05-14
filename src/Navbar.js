@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const all = useSelector((state) => state.quantity)
+    const all = useSelector((state) => state.quantity);
     const quantity = all.quantity;
     const picture = all.picture;
     const title = all.title;
@@ -42,12 +42,19 @@ const Navbar = () => {
                             </div>
                             <button className="delete" onClick={() => remove_Cart(remove_cart())}><img src={Del} alt=""/></button>
                         </div>
-                        <button className='checkout' onClick={() => console.log(all)}>Checkout</button>
+                        <button className='checkout' onClick={() => {console.log(`${quantity} ${title} purchased at $${(price * quantity).toFixed(2)}`); remove_Cart(remove_cart())}}>Checkout</button>
                     </div>
     }
 
+    const removeCart = () => {
+        if (cart ===  true) {
+            setCart(false)
+        }
+    }
+    
+
     return ( 
-        <div className="navbar">
+        <div className="navbar" onClick={() => removeCart()}>
             <div className="logo-container">
                 <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /></button>
                 <Link to='/'><img src={Logo} alt="" className='logo' /></Link>
