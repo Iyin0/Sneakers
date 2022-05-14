@@ -87,8 +87,8 @@ const Navbar = () => {
                 <button className='cart' onClick={() => setCart((prev) => !prev)}>
                     <CustomCart/>
                     {quantity ? (
-                        <div className="quantity">{quantity}</div>
-                    ): (<div className="quantity-emp"></div>)}
+                        <span className="quantity">{quantity}</span>
+                    ): (<span className="quantity-emp"></span>)}
                 </button>
                 { cart ? (
                     <div>{content}</div>

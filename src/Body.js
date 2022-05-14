@@ -108,7 +108,7 @@ const Body = () => {
                                            update_Cart(add_price(merch[0].merch_price))
                                            }}>
                         <CustomCart className="custom-cart" fill={"white"}/>
-                        <div>Add to cart</div>
+                        <span>Add to cart</span>
                     </button>
                 </div>
             </div>
