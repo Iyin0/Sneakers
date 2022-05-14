@@ -42,7 +42,7 @@ const Navbar = () => {
                             </div>
                             <button className="delete" onClick={() => remove_Cart(remove_cart())}><img src={Del} alt=""/></button>
                         </div>
-                        <button className='checkout' onClick={() => {console.log(`${quantity} ${title} purchased at $${(price * quantity).toFixed(2)}`); remove_Cart(remove_cart())}}>Checkout</button>
+                        <button className='checkout' onClick={() => {alert(`${quantity} ${title} purchased at $${(price * quantity).toFixed(2)}`); remove_Cart(remove_cart())}}>Checkout</button>
                     </div>
     }
 
