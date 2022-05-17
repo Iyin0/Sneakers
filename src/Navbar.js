@@ -54,7 +54,7 @@ const Navbar = () => {
     
 
     return ( 
-        <nav className="navbar" onClick={() => removeCart()}>
+        <div className="navbar" onClick={() => removeCart()}>
             <div className="logo-container">
                 <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /><span className="sr-only">None</span></button>
                 <Link to='/'><img src={Logo} alt="" className='logo' /><span className="sr-only">None</span></Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 ) : (null)}
                 <Link to='/profile' className="profile-img"><span className="sr-only">None</span><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
             </div>
-        </nav>
+        </div>
      );
 }
  

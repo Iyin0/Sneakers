@@ -57,7 +57,7 @@ const Body = () => {
     };
     
     return ( 
-        <body className="body">
+        <div className="body">
             <div className="left-body">
                 <div className="big-img-slider">
                     {merch[0].merch_img.map((image, index) => (
@@ -144,7 +144,7 @@ const Body = () => {
                     </div>
                 </div>
             ) : (null)}
-        </body>
+        </div>
      );
 }
  
