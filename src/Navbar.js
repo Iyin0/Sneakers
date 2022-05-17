@@ -54,10 +54,10 @@ const Navbar = () => {
     
 
     return ( 
-        <div className="navbar" onClick={() => removeCart()}>
+        <nav className="navbar" onClick={() => removeCart()}>
             <div className="logo-container">
                 <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /><span className="sr-only">None</span></button>
-                <Link to='/'><img src={Logo} alt="" className='logo' /></Link>
+                <Link to='/'><img src={Logo} alt="" className='logo' /><span className="sr-only">None</span></Link>
             </div>
             <div className='others'>
                 <Link to='/collections' className='others-list'>Collections</Link>
@@ -97,9 +97,9 @@ const Navbar = () => {
                 { cart ? (
                     <div>{content}</div>
                 ) : (null)}
-                <Link to='/profile' className="profile-img"><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
+                <Link to='/profile' className="profile-img"><span className="sr-only">None</span><img src={require("./ecommerce-product-page-main/images/image-avatar.png")} alt=""  className='avatar'/></Link>
             </div>
-        </div>
+        </nav>
      );
 }
  
