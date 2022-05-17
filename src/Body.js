@@ -68,27 +68,28 @@ const Body = () => {
                         </div>
                     ))}
                     <div className="change-img">
-                        <button className="previous" onClick={() => prevSlide()}><CustomPrevious/></button>
-                        <button className="next" onClick={() => nextSlide()}><CustomNext/></button>
+                        <button className="previous" onClick={() => prevSlide()}><CustomPrevious/><span className="sr-only">None</span></button>
+                        <button className="next" onClick={() => nextSlide()}><CustomNext/><span className="sr-only">None</span></button>
                     </div>
                 </div>
                 <div className="small-img">
                     {merch[0].merch_thumbnail.map((img, index) => (
                         <button className={index === current ? 'current-img' : 'just-img'} key={index} onClick={() => {setState(true); setClose("hsl(0, 0%, 100%)"); setCurrent(index)}}>
                             <img src={img} alt=""/>
+                            <span className="sr-only">None</span>
                         </button>
                     ))}
                 </div>
             </div>
             <div className="right-body">
-                <h3 className="store-name">{merch[0].store_name}</h3>
+                <h1 className="store-name">{merch[0].store_name}</h1>
                 <div className="store-merch">{merch[0].store_merch}</div>
-                <h3 className="merch-description">{merch[0].merch_description}</h3>
+                <h2 className="merch-description">{merch[0].merch_description}</h2>
                 <div className="merch-new">
-                    <h2 className="merch-price">${(merch[0].merch_original * (merch[0].merch_discount/100)).toFixed(2)}</h2>
-                    <h2 className="merch-discount">{merch[0].merch_discount}%</h2>
+                    <h3 className="merch-price">${(merch[0].merch_original * (merch[0].merch_discount/100)).toFixed(2)}</h3>
+                    <h3 className="merch-discount">{merch[0].merch_discount}%</h3>
                     <div className='price-wrapper-small'>
-                        <h2 className="merch-origin-small">${merch[0].merch_original}</h2>
+                        <h4 className="merch-origin-small">${merch[0].merch_original}</h4>
                         <div className="price-slash-small"></div>
                     </div>
                 </div>
@@ -98,9 +99,9 @@ const Body = () => {
                 </div>
                 <div className="counter">
                     <div className="counter-cont">
-                        <button className="minus" onClick={() => decreaseItem()}><img src={Minus} alt=""/></button>
+                        <button className="minus" onClick={() => decreaseItem()}><img src={Minus} alt=""/><span className="sr-only">None</span></button>
                         <div className="amount">{count}</div>
-                        <button className="plus" onClick={() => increaseItem()}><img src={Plus} alt=""/></button>
+                        <button className="plus" onClick={() => increaseItem()}><img src={Plus} alt=""/><span className="sr-only">None</span></button>
                     </div>
                     <button className='add-to-cart' onClick={() => {update_Cart(add_cart(count)); 
                                            update_Cart(add_pic(merch[0].merch_thumbnail[0])); 
@@ -116,6 +117,7 @@ const Body = () => {
                 <div className="over-body">
                     <button className="close-body" onClick={() => {setState(false); setCurrent(0)}} onMouseEnter={() => setClose("hsl(26, 100%, 55%)")} onMouseLeave={() => setClose("hsl(0, 0%, 100%)")}>
                         <CustomClose  fill={close} />
+                        <span className="sr-only">None</span>
                     </button>
                     <div className="img-container">
                         <div className="img-slider">
@@ -127,14 +129,15 @@ const Body = () => {
                                 </div>
                             ))}
                             <div className="change-img-over">
-                                <button className="previous" onClick={() => prevSlide()}><CustomPrevious/></button>
-                                <button className="next" onClick={() => nextSlide()}><CustomNext/></button>
+                                <button className="previous" onClick={() => prevSlide()}><CustomPrevious/><span className="sr-only">None</span></button>
+                                <button className="next" onClick={() => nextSlide()}><CustomNext/><span className="sr-only">None</span></button>
                             </div>
                         </div>
                         <div className="small-img-over">
                             {merch[0].merch_thumbnail.map((img, index) => (
                                 <button className={index === current ? 'current-img' : 'just-img'} key={index} onClick={() => setCurrent(index)}>
                                     <img src={img} alt=""/>
+                                    <span className="sr-only">None</span>
                                 </button>
                             ))}
                         </div>

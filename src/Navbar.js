@@ -56,7 +56,7 @@ const Navbar = () => {
     return ( 
         <div className="navbar" onClick={() => removeCart()}>
             <div className="logo-container">
-                <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /></button>
+                <button className='menu' onClick={() => setMenu(true)}><img src={Menu} alt="" /><span className="sr-only">None</span></button>
                 <Link to='/'><img src={Logo} alt="" className='logo' /></Link>
             </div>
             <div className='others'>
@@ -70,7 +70,10 @@ const Navbar = () => {
                 <div className='other-set'>
                     <div className="small-other">
                         <div className='small-other-cont'>
-                            <button className="cust-close" onClick={() => setMenu(false)}><CustomClose  fill={'grey'} /></button>
+                            <button className="cust-close" onClick={() => setMenu(false)}>
+                                <span className="sr-only">None</span>
+                                <CustomClose  fill={'grey'} />
+                            </button>
                             <div className="other-items">
                                 <Link to='/collections' className='other-item'>Collections</Link>
                                 <Link to='/men' className='other-item'>Men</Link>
@@ -86,6 +89,7 @@ const Navbar = () => {
             <div className="right-nav">
                 <button className='cart' onClick={() => setCart((prev) => !prev)}>
                     <CustomCart/>
+                    <span className="sr-only">None</span>
                     {quantity ? (
                         <span className="quantity">{quantity}</span>
                     ): (<span className="quantity-emp"></span>)}
