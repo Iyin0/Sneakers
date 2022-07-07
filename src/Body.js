@@ -40,6 +40,7 @@ const Body = () => {
     const imgLength = merch[0].merch_img.length;
     const update_Cart = useDispatch();
 
+
     const nextSlide = () => {
         setCurrent(current === imgLength - 1 ? 0 : current + 1);
     };

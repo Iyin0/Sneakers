@@ -16,10 +16,9 @@
   font-weight: 800;
 }
 
-
 body {
   margin: 0;
-  font-family: 'Kumbh Sans', sans-serif;;
+  font-family: "Kumbh Sans", sans-serif;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
@@ -67,7 +66,7 @@ body {
   margin-left: 20px;
 }
 
-.navbar .others .others-list{
+.navbar .others .others-list {
   margin-left: 20px;
   margin-right: 20px;
   text-decoration: none;
@@ -126,7 +125,8 @@ body {
   width: 350px;
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
-  box-shadow: 4px 6px 8px 0 rgba(133, 133, 133, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 4px 6px 8px 0 rgba(133, 133, 133, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar .cart-header {
@@ -240,7 +240,6 @@ body {
   width: 50px;
   height: 50px;
 }
-
 
 /* Body */
 .body {
@@ -404,7 +403,7 @@ body {
   justify-content: space-between;
 }
 
-.body .counter-cont .minus{
+.body .counter-cont .minus {
   width: 50px;
   height: 100%;
   display: flex;
@@ -416,7 +415,7 @@ body {
   background-color: aliceblue;
 }
 
-.body .counter-cont .amount{
+.body .counter-cont .amount {
   font-size: 17px;
   font-weight: 700;
 }
@@ -455,7 +454,8 @@ body {
   border: none;
   background-color: hsl(26, 93%, 61%);
   color: white;
-  box-shadow: 10px 1px 8px 0 hsl(25, 100%, 94%), 6px 6px 20px 0 hsl(25, 100%, 83%);
+  box-shadow: 10px 1px 8px 0 hsl(25, 100%, 94%),
+    6px 6px 20px 0 hsl(25, 100%, 83%);
 }
 
 .body .counter .add-to-cart span {
@@ -514,7 +514,8 @@ body {
   display: none;
 }
 
-.over-body .change-img-over button, .change-img button {
+.over-body .change-img-over button,
+.change-img button {
   background-color: azure;
   width: 50px;
   height: 50px;
@@ -546,7 +547,6 @@ body {
   border-radius: 15px;
 }
 
-
 .body .small-img-over {
   display: flex;
   justify-content: space-between;
@@ -574,9 +574,7 @@ body {
   overflow: hidden;
 }
 
-
 @media screen and (max-width: 500px) {
-
   .body {
     margin: 0;
     padding: 0;
@@ -615,15 +613,14 @@ body {
     width: 100vw;
     display: flex;
   }
-  
+
   .navbar .small-other {
     background-color: white;
     height: 100vh;
     width: 60vw;
     font-size: 20;
   }
-  
-  
+
   .navbar .cust-close {
     border: none;
     background-color: white;
@@ -635,12 +632,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
   .navbar .other-items {
     margin-top: 50px;
     font-weight: 900;
   }
-  
+
   .navbar .other-items .other-item {
     padding-bottom: 20px;
     height: 30px;
@@ -650,13 +647,14 @@ body {
     text-decoration: none;
     color: black;
   }
-  
-  .navbar .other-items .other-item:hover, .cust-close:hover{
+
+  .navbar .other-items .other-item:hover,
+  .cust-close:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
   }
-  
+
   .navbar .empty-side {
     background-color: rgb(0, 0, 0);
     height: 100vh;
@@ -688,7 +686,7 @@ body {
   .navbar .cart .quantity {
     min-width: 20px;
   }
-  
+
   .navbar .profile-img {
     background-color: aqua;
     width: 30px;
@@ -709,7 +707,7 @@ body {
     align-items: center;
   }
 
-  .left-body .change-img{
+  .left-body .change-img {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -729,11 +727,11 @@ body {
     width: 370px;
     height: 350px;
   }
-  
+
   .body .small-img {
     display: none;
   }
-  
+
   .body .right-body {
     margin-top: 40px;
     width: 345px;
@@ -744,30 +742,30 @@ body {
     font-size: 13px;
     margin-top: -15px;
   }
-  
+
   .body .right-body .store-merch {
     font-size: 30px;
     margin-top: 5px;
   }
-  
+
   .body .right-body .merch-description {
     font-size: 16px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 400;
   }
-  
+
   .body .right-body .merch-new {
     margin-top: -20px;
     display: flex;
     align-items: center;
   }
-  
+
   .body .right-body .merch-price {
     font-size: 25px;
     margin-right: 20px;
   }
-  
+
   .body .right-body .price-wrapper-small {
     margin-left: 80px;
     width: 60px;
@@ -778,7 +776,7 @@ body {
     font-size: 16px;
     color: rgb(199, 199, 199);
   }
-  
+
   .body .right-body .price-slash-small {
     position: relative;
     width: 100%;
@@ -786,18 +784,20 @@ body {
     border-top: 2px solid rgb(199, 199, 199);
     top: -22px;
   }
-  
-  .body .right-body .merch-origin, .price-slash, .price-wrapper {
+
+  .body .right-body .merch-origin,
+  .price-slash,
+  .price-wrapper {
     display: none;
   }
-  
+
   .body .counter {
     display: flex;
     flex-direction: column;
     height: auto;
     margin-top: 5px;
   }
-  
+
   .body .counter-cont {
     display: flex;
     background-color: aliceblue;
@@ -807,13 +807,14 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  
-  .body .counter-cont .minus, .body .counter-cont .plus{
+
+  .body .counter-cont .minus,
+  .body .counter-cont .plus {
     width: 70px;
     height: 100%;
   }
-  
-  .body .counter-cont .amount{
+
+  .body .counter-cont .amount {
     font-size: 17px;
     font-weight: 700;
   }
@@ -824,7 +825,7 @@ body {
     width: 100%;
     height: 60px;
   }
-  
+
   .body .counter .add-to-cart img {
     margin-right: 18px;
   }
